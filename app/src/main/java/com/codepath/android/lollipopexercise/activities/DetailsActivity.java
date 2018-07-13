@@ -11,6 +11,8 @@ import com.bumptech.glide.Glide;
 import com.codepath.android.lollipopexercise.R;
 import com.codepath.android.lollipopexercise.models.Contact;
 
+// Make sure to import this line at the top!
+
 public class DetailsActivity extends AppCompatActivity {
     public static final String EXTRA_CONTACT = "EXTRA_CONTACT";
     private Contact mContact;
@@ -18,6 +20,7 @@ public class DetailsActivity extends AppCompatActivity {
     private TextView tvName;
     private TextView tvPhone;
     private View vPalette;
+    private int REQUEST_CODE = 5;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,6 +35,19 @@ public class DetailsActivity extends AppCompatActivity {
         // Extract contact from bundle
         mContact = (Contact)getIntent().getExtras().getSerializable(EXTRA_CONTACT);
 
+
+
+
+
+
+
+
+
+
+
+
+
+
         // Fill views with data
         Glide.with(DetailsActivity.this).load(mContact.getThumbnailDrawable()).centerCrop().into(ivProfile);
         tvName.setText(mContact.getName());
@@ -42,5 +58,7 @@ public class DetailsActivity extends AppCompatActivity {
     public boolean onOptionsItemSelected(MenuItem item) {
         return super.onOptionsItemSelected(item);
     }
+
+
 
 }
